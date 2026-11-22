@@ -1,0 +1,18 @@
+# Tooling disclosure for this record's claim(s): which models, at what access tier, over what time, as stated by the
+# claimant or inferred from the public record (the basis says which). Read by DEBRIEF/tools/tooling.py into the ledger.
+# Tier words and model release dates: DEBRIEF/tools/models.yaml. Nothing here is a standing.
+claims:
+- by: Levent Alpöge and Tristan Buckmaster
+  models:
+  - claude-fable-5-2
+  - claude-unversioned
+  - codex
+  - gpt-5-6-sol
+  - gpt-6-astra
+  tier: mixed
+  basis: 'inferred: Alpöge is an Anthropic employee; Buckmaster''s statement of 7 September calls the collaboration
+    personal and names Claude, and Codex with GPT-5.6 Sol and GPT-6 Astra, for the pair''s earlier forced results;
+    the repository''s commits of 20 November name Claude Fable 5.2; the tier of Buckmaster''s access is not stated'
+  work:
+    to: '2026-11-20'
+  duration: not stated for this result; the pair's forced results date from August by the September statement
