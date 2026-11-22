@@ -2,7 +2,22 @@
 
 A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) for **The claimed finite-time blow-up of the unforced three-dimensional Navier–Stokes equations by Levent Alpöge and Tristan Buckmaster, released on 20 November 2026 as a paper and a Lean development**.
 
-**Standing.** Certified 0. Accepted 0. Refuted 0. Open gaps 5. This record is at tier zero: the claim and its public artifacts are pinned, the checks still owed are listed, and nothing has been run or read yet. The first contribution is open.
+<!-- standing:begin -->
+**Standing, 22 Nov 2026.** Stage: Registered. Needs next: The Lean development has not been built or kernel-checked by anyone outside the claimant ([what would close it](ASKS.md)).
+
+| certified | accepted | refuted | open gaps | cycles filed | last cycle |
+|---|---|---|---|---|---|
+| 0 | 0 | 0 | 5 | 0 | 22 Nov 2026 |
+
+| | |
+|---|---|
+| checked by machine | nobody yet |
+| read by a person | nobody yet; no reading guide yet |
+| elsewhere | [Clay Mathematics Institute](https://www.claymath.org/millennium/navier-stokes-equation/): Active · [DeepMind formal-conjectures, NavierStokes.lean](https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/Millennium/NavierStokes.lean): research open · [The certificate, per the claimants' README](https://raw.githubusercontent.com/tristanbuckmaster/navier-stokes/main/README.md): is not in this repository |
+| related | [Navier–Stokes blow-up, forced (OpenAI)](https://github.com/Nervous-Machine/DEBRIEF-math-navierstokes-forced): the unforced case; removes the force this claim uses; same problem page · [Riemann Hypothesis (Alpöge, with Claude)](https://github.com/Nervous-Machine/DEBRIEF-math-riemann): same claimant (Alpöge), released the same morning |
+
+Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: nothing has standing yet.
+<!-- standing:end -->
 
 This claim is on the public claims board, https://math-board.nervousmachine.com, which shows its stage, who has contributed, and what it needs next.
 
