@@ -1,0 +1,385 @@
+{
+ "missions": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "title": "The claimed finite-time blow-up of the unforced three-dimensional Navier–Stokes equations by Levent Alpöge and Tristan Buckmaster, released on 20 November 2026 as a paper and a Lean development",
+   "kind": "audit",
+   "protocol_version": "0.1.0",
+   "claim_rule_met": false,
+   "label": "Navier–Stokes blow-up, unforced (Alpöge and Buckmaster)",
+   "area": "Partial differential equations: regularity of the Navier–Stokes equations",
+   "rests_on": "a 79-page paper, a Lean 4 development whose statement files carry sorry and whose solution file proves them from a library, and a computer-assisted certificate that is named by hash and not yet released",
+   "pods": [
+    "DEBRIEF-math-navierstokes"
+   ],
+   "began": "2026-11-22",
+   "status": "active",
+   "record_quality": "full_ledger",
+   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_limits": [
+    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+   ],
+   "scope_limits": [
+    "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
+    "Public record through 2026-11-22."
+   ],
+   "opening": {
+    "spoken": "This record covers the claimed solution of Navier–Stokes existence and smoothness: what has been claimed, what it rests on, and what would have to be checked by whom."
+   },
+   "short_version": {
+    "spoken": "On 20 November 2026, the same morning as the Riemann Hypothesis note, Levent Alpöge and Tristan Buckmaster posted a 79-page paper and a Lean 4 development in a personal GitHub repository, claiming that smooth, compactly supported, divergence-free initial data on three-dimensional space, and smooth periodic data on the torus, exist for which the Navier–Stokes equations without any force blow up in finite time, at every viscosity. In the Clay formulation this would refute alternatives (A) and (B) and establish (C) and (D) without the force that OpenAI's September claim used. The argument has two parts: a stability result, that one discretely self-similar solution of a certain kind forces blow-up, and the existence of such a solution near an approximate one that satisfies explicit inequalities, which the authors call a certificate. The certificate is not released; the paper gives its hash. That it satisfies the inequalities is checked by interval arithmetic outside the formalization. The authors say the write-up is unpolished and that they posted it rather than wait. Nobody independent has reported building the development or reading the argument. Everything here is open."
+   },
+   "what_happened": {
+    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+   },
+   "implications": {
+    "rely_on": [],
+    "do_not_rely_on": [
+     {
+      "spoken": "the claimed solution as settled; nothing in it has standing yet",
+      "finding_ids": []
+     }
+    ],
+    "stop": [],
+    "new": []
+   },
+   "certainty_statement": {
+    "spoken": "Nothing is certified or accepted. Every item is open."
+   },
+   "sources": [
+    {
+     "kind": "problem",
+     "ref": "https://www.claymath.org/millennium/navier-stokes-equation/"
+    },
+    {
+     "kind": "pdf",
+     "ref": "https://github.com/tristanbuckmaster/navier-stokes/blob/ad53419de079eb8f95f60313473374624a348546/paper/finite-time-blow-up-navier-stokes.pdf (sha256 4a01929b2f8a595637bbbe1dfef9724e5de768d31283d62415ce045e2ed69901, 1615293 bytes, fetched 2026-11-22)"
+    },
+    {
+     "kind": "repo",
+     "ref": "github.com/tristanbuckmaster/navier-stokes at commit ad53419de079eb8f95f60313473374624a348546 (2026-11-20); no licence file; 2270 Lean files; has a lakefile"
+    },
+    {
+     "kind": "formal statement (third party)",
+     "ref": "github.com/google-deepmind/formal-conjectures FormalConjectures/Millennium/NavierStokes.lean at 2207c54d0dbe960de591d280f997b195bf3f6e28"
+    }
+   ]
+  }
+ ],
+ "cycles": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "cycle": 0,
+   "dated": "2026-09-07 to 2026-11-22",
+   "kind": "replay",
+   "preregistered": {
+    "question": "What is on the public record about this claim?",
+    "rule": "no look-ahead; each event dated by its first public posting; artifacts pinned by commit or hash",
+    "predictions": [],
+    "commit": null,
+    "before_data": false
+   },
+   "outcome": {
+    "verdict": "admitted",
+    "numbers": {
+     "claims": 1,
+     "artifacts": 2
+    }
+   },
+   "spoken": "Tristan Buckmaster posted a statement saying that he and Levent Alpöge had, with large language models, obtained finite-time blow-up with smooth forcing for the incompressible porous media, Boussinesq and three-dimensional Euler equations, crediting the program to Diego Córdoba and Luis Martínez-Zoroa; the statement says their Euler proof was checked in Lean on 22 August and that they believed they also had blow-up for hypo-dissipative Navier–Stokes, not yet released. OpenAI announced finite-time blow-up for the Navier–Stokes equations with a smooth force, with a Lean development; recorded separately as DEBRIEF-math-navierstokes-forced. Buckmaster alleged that OpenAI had adopted the pair's method after learning of their progress; OpenAI denied it. The repository tristanbuckmaster/navier-stokes was created at 10:40 UTC and received its two commits at 13:28 and 13:33 UTC: the paper, dated 20 November and built at 13:22 UTC by its metadata, and the Lean package. Scientific American reported the posting the same day, quoting no independent mathematician. Nervous Machine fetched the paper (sha256 4a01929b…, 1,615,293 bytes) and pinned the repository at its second commit. The Clay Mathematics Institute's problem page lists the problem as Active. DeepMind's formal-conjectures file for the problem, at its latest commit of 29 October, lists (A) and (B) as open and (C) and (D) as solved.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG1",
+    "EG2",
+    "EG3",
+    "EG4",
+    "EG5"
+   ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "audience": "briefing",
+   "created_by": "DEBRIEF/tools/watch_pages.py",
+   "created_at": "2026-11-22T20:17:36Z",
+   "provenance": {
+    "source": "public pages named in watch.yaml, fetched and hashed; status words read by the patterns there; hashes in source/external.sha256"
+   },
+   "cycle": "pages-2026-11-22",
+   "dated": "2026-11-22",
+   "kind": "replay",
+   "by": null,
+   "preregistered": {
+    "question": "What do the pages this record watches say today?",
+    "rule": "each page fetched, hashed and its status word read by a fixed pattern; no new checking",
+    "predictions": [],
+    "commit": null,
+    "before_data": false
+   },
+   "outcome": {
+    "verdict": "admitted",
+    "numbers": {
+     "external": {
+      "pages": [
+       {
+        "name": "Clay Mathematics Institute",
+        "url": "https://www.claymath.org/millennium/navier-stokes-equation/",
+        "read": "2026-11-22T20:17:36Z",
+        "role": "problem authority (Millennium Prize rules: publication, two years, general acceptance)",
+        "sha256": "3bf5fab042b6cbe7d2bf0052ca6bea8c6be88b6831a751c4877357e76934cc77",
+        "bytes": 108515,
+        "hash_of": "text",
+        "status": "Active",
+        "changed": true
+       },
+       {
+        "name": "DeepMind formal-conjectures, NavierStokes.lean",
+        "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/main/FormalConjectures/Millennium/NavierStokes.lean",
+        "read": "2026-11-22T20:17:36Z",
+        "role": "third-party formal statement of the four alternatives",
+        "sha256": "bd25a14ac8b8f17e6169005d33d39f5f778456521c68678395e3088697aa85db",
+        "bytes": 14574,
+        "hash_of": "text",
+        "status": "research open",
+        "changed": true
+       },
+       {
+        "name": "The certificate, per the claimants' README",
+        "url": "https://raw.githubusercontent.com/tristanbuckmaster/navier-stokes/main/README.md",
+        "read": "2026-11-22T20:17:36Z",
+        "role": "the claimants' repository; a certificate release would change it",
+        "sha256": "28e634ef9f324958595d47e48b0cdebe86fefe7e18a650beec9e5853ebb46cf1",
+        "bytes": 2394,
+        "hash_of": "text",
+        "status": "is not in this repository",
+        "changed": true
+       }
+      ]
+     }
+    }
+   },
+   "spoken": "What the watched pages said on 2026-11-22. Clay Mathematics Institute: Active; DeepMind formal-conjectures, NavierStokes.lean: research open; The certificate, per the claimants' README: is not in this repository. A page's status word is what its keeper says; it gives nothing here a standing.",
+   "finding_ids": [],
+   "gap_ids": []
+  }
+ ],
+ "findings": [],
+ "gaps": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG1",
+   "title": "The Lean development has not been built or kernel-checked by anyone outside the claimant",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 1,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms",
+     "kind": "rerun",
+     "external": true,
+     "who_could_act": "anyone with a machine and a few hours"
+    }
+   ],
+   "spoken": "The claimant reports a Lean development that compiles with standard axioms only. Nobody outside the claimant has reported building it.",
+   "ask": {
+    "spoken": "A rerun of the Lean build on an independent machine, written down first."
+   },
+   "expected_signal": "a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG2",
+   "title": "Do the formal statements say what the problem asks?",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 2,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a machine comparison of the claimant's main theorem with the third-party formal statement navier_stokes_existence_and_smoothness_R3 in google-deepmind/formal-conjectures, then a human read of any difference",
+     "kind": "trace",
+     "external": true,
+     "who_could_act": "anyone who can read Lean; the two statements are public"
+    },
+    {
+     "what": "two independent mathematicians read the formal statement against the problem as posed and sign, or refuse",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area, about an hour with a reading guide"
+    }
+   ],
+   "spoken": "A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem as posed is a separate question that a person has to answer. A third-party formalization of the problem statement exists, so part of this can be compared by machine.",
+   "ask": {
+    "spoken": "A reading of the formal statement against the problem as posed, by someone who did not write it."
+   },
+   "expected_signal": "a trace cycle and two signed read cycles, or a refusal naming the difference",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG3",
+   "title": "No independent mathematician has reported reading the proof, and there is no referee report",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 3,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a read cycle by a mathematician in the area who is not an author, signing or refusing each main step",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area"
+    },
+    {
+     "what": "a referee report or journal acceptance, recorded by date",
+     "kind": "measurement",
+     "external": true,
+     "who_could_act": "a journal; the record notes the date when it happens"
+    }
+   ],
+   "spoken": "The claim was announced by Tristan Buckmaster on Mastodon and by the repository itself; the press reported it the same day. No independent reading, referee report or journal submission is on the public record.",
+   "ask": {
+    "spoken": "Someone in the field reads it and says, under their name, what holds and what does not."
+   },
+   "expected_signal": "a signed or refused read cycle; a dated referee report",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG4",
+   "title": "The certificate the proof rests on is named by hash and not released",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 4,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "the authors release the certificate, matching the hash 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5 given in the paper, and the interval-arithmetic program that checks it against the conditions of Appendix B, pinned by hash and date; then an independent rerun of that check",
+     "kind": "data_release",
+     "external": true,
+     "who_could_act": "the authors; then anyone with FLINT and Arb and a few hours"
+    }
+   ],
+   "spoken": "The existence of the self-similar solution, and so the blow-up, rests on a certificate: an approximate solution satisfying explicit inequalities, checked by interval arithmetic outside the formalization. The paper gives the certificate's hash and says it will be released soon. Until it is, with the program that checks it, the formal development establishes only that a certificate of the stated form would imply blow-up.",
+   "ask": {
+    "spoken": "The certificate and its checking program, released and pinned; then one independent rerun of the check."
+   },
+   "expected_signal": "a data cycle pinning the certificate and program, whose hash matches the paper's; then a rerun cycle reporting the check's result",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG5",
+   "title": "The formal statements stop short of the paper's, and the formal proofs do not follow the paper's",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 5,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a reader with the paper and the Lean statement files checks each of the README's stated differences and signs or refuses that the formal theorems carry the paper's claims",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "an analyst who reads Lean, a few hours with the README's list"
+    }
+   ],
+   "spoken": "By the development's own README, the formalization came first and the paper was rewritten with simpler arguments and citations in place of proofs, so the two share statements but not proofs; the certificate step is formalized only to a weak profile, with smoothness, closeness and rate left to the paper; and the formal definition of a certificate asks more than the paper's in thirteen places. Whether the formal theorems and the paper's are the same claims is a reading, item by item.",
+   "ask": {
+    "spoken": "A reading of the README's list of differences between the formal statements and the paper's, signed or refused one by one."
+   },
+   "expected_signal": "a read cycle listing each difference as immaterial, material or unresolved",
+   "resolution_by": "none registered"
+  }
+ ],
+ "anomalies": [],
+ "background": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "Navier–Stokes existence and smoothness",
+   "spoken": "Do smooth solutions of the three-dimensional incompressible Navier–Stokes equations, started from smooth data, stay smooth for all time, or can the velocity become unbounded in finite time? Fefferman's formulation accepts either answer: a proof of existence and smoothness, with no force on space (A) or on the torus (B), or a proof of breakdown, which may use a smooth force, on space (C) or on the torus (D). A third-party Lean formalization of all four alternatives exists in DeepMind's formal-conjectures; it lists (A) and (B) as open and, since September 2026, (C) and (D) as solved on the strength of OpenAI's forced construction. This claim is the unforced case: it would refute (A) and (B) as stated there.",
+   "source": "https://www.claymath.org/millennium/navier-stokes-equation/"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-22T20:13:05Z",
+   "mission_id": "navierstokes-2026-11",
+   "pod": "DEBRIEF-math-navierstokes",
+   "provenance": {
+    "source": "public record to 2026-11-22: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "The claim by Levent Alpöge and Tristan Buckmaster",
+   "spoken": "The paper's abstract says that smooth, compactly supported, divergence-free data on space, and smooth divergence-free data on the torus, exist whose solutions of the unforced three-dimensional Navier–Stokes equations blow up in finite time, converging in self-similar variables to a backward discretely self-similar solution and blowing up at its rate. Part one (its Theorem 1.1): a profile, a smooth nonzero solution of the self-similar equations that is periodic in self-similar time up to a linear isometry and has stated decay, implies this blow-up; the proof shows such a solution is stable up to finitely many directions. Part two (its Theorem 7.1): such a profile exists near an approximate one that satisfies explicit inequalities, the certificate. Appendix B describes the certificate's form; Appendix C the computation of the approximate profile. The certificate is not in the repository; the abstract gives its hash and says it will be released soon. That it satisfies the inequalities is checked, the authors say, by interval arithmetic at 128 bits with the Arb library through FLINT, which is not part of the formalization and not in the repository either. The Lean package is the working repository's, with one patch of 20 November applied to the cell-layer statements and dependent proofs, and the README says the patched package was not rebuilt when the repository was assembled. The README also says the formal proofs do not follow the paper's, that the formal statement of the certificate step stops at a weak profile where the paper obtains a smooth one, that the formal definition of a certificate asks more than the paper's in thirteen places, and that the rate and convergence in Theorem 1.1 are not part of the formal statements. The package has no licence file. The authors say in the paper's release that the write-up is unpolished and that after September they could not risk waiting.",
+   "source": "https://github.com/tristanbuckmaster/navier-stokes"
+  }
+ ],
+ "sessions": []
+}
