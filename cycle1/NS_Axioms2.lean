@@ -1,0 +1,24 @@
+import Solution
+set_option maxHeartbeats 4000000
+#print axioms Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition
+#print axioms Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition
+#print axioms Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition
+#print axioms Breakdown.breakdown_on_space
+#print axioms Breakdown.breakdown_on_torus
+#print axioms Breakdown.breakdown_on_space_of_weak
+#print axioms Breakdown.certificate_orbit
+#print axioms Breakdown.ModeWeights.multiplier_density
+#print axioms Breakdown.ModeWeights.mode_azimuthal_gain
+#print axioms Breakdown.ModeWeights.stretch_mean_bound
+#print axioms Breakdown.ModeWeights.multiplierInequality_of_density
+#print axioms Breakdown.PieceWeights.piece_multiplier_density
+#print axioms Breakdown.PieceWeights.multiplierInequality_of_pieceDensity
+#print axioms Breakdown.extended_certificate_orbit
+#print axioms Breakdown.CoerciveWeak.extendedCoerciveClause_of_pieceData
+#print axioms Breakdown.CellCert.CellSystem.fractional_breakdown_of_cell_system
+#print axioms Breakdown.SteadyCert.fracCertificate_profile
+#print axioms Breakdown.fractional_breakdown_on_space
+#print axioms Breakdown.fractional_breakdown_on_torus
+#print axioms Breakdown.certificate_breakdown_on_space
+#print axioms Breakdown.extended_certificate_breakdown_on_space
+#print axioms Breakdown.fractional_certificate_breakdown

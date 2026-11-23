@@ -1,0 +1,61 @@
+kind: rerun
+cycle: 1
+dated: "2026-11-22"
+by: "Nervous Machine (Heidi Bennett; Claude Fable 5.1 as the operating agent)"
+preregistered:
+  commit: "prereg_rerun.yaml"
+  registered: "sha256 4329e019bfc4a5ed0217e1335bb00a32576f773bd60dce8af0c520e1000e7777 at 2026-11-23T05:04:03Z; amendment A1 records a defect in the R5/R6 check files and their rerun"
+  results:
+    - cycle1/env.txt
+    - cycle1/R1.txt
+    - cycle1/R2.log
+    - cycle1/R3_build.log
+    - cycle1/R3_time.txt
+    - cycle1/R4.txt
+    - cycle1/R5_rerun.txt
+    - cycle1/R6_diff_rerun.txt
+    - cycle1/R7.txt
+    - cycle1/cycle1-logs.sha256
+  question: >
+    Does the Lean package in tristanbuckmaster/navier-stokes at the pinned commit build on a machine the claimants have
+    never touched, do the theorems its comparator files name use only Lean's three standard axioms once proved by
+    Solution.lean, and do the statement files and the solution state those theorems with the same types?
+  rule: "R1 to R7 as registered; a finding with standing ACCEPTED on R3 to R6 passing; nothing certified (operating agent is an Anthropic model)"
+  predictions:
+    - "R1 pass, about 2,270 files; R2 pass"
+    - "R3 exit 0 with 0 error lines, wall time 1 to 12 hours, peak memory under 60 GB; a failure in the patched cell-layer files is a real possibility"
+    - "R4 sorry only in the ten statement files; nothing under Breakdown/ or in Solution.lean"
+    - "R5 exactly propext, Classical.choice, Quot.sound for each of the nineteen comparator-named theorems and the three consequences"
+    - "R6 the nineteen printed types textually identical between statement files and Solution"
+    - "R7 recorded, no verdict"
+  before_data: true
+environment:
+  hardware: "Lima VM primegaps on Heidi's Mac: Ubuntu, aarch64, 20 cores, 98 GB RAM, 290 GB disk; the repository was cloned into a new empty directory inside the VM; nothing from it ran on the host"
+  toolchain: "Lean v4.33.1, Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 from the community cache, elan 4.2.4, git 2.53.0"
+  wall_time: "23 minutes end to end, of which the build took 22:31"
+outcome:
+  verdict: confirmed
+  numbers:
+    R1: "pass: HEAD ad53419de079eb8f95f60313473374624a348546; git ls-tree -r HEAD has 2,285 entries and hashes to 3acca244…; 2,271 .lean files under lean/, 616,060 lines"
+    R2: "pass: lake exe cache get exit 0 in 52 s (8,689 files already cached on this VM from the Riemann record, which pins the same Mathlib commit)"
+    R3: "pass: lake build exit 0, 'Build completed successfully (10987 jobs)', 0 error lines, 3,058 warning lines (all linter: 763 unused variables, 276 unused simp arguments, 160 unused section variables, 120 unused tactics, 83 unnecessary seq focus, 63 unreachable tactics, 45 style, 22 unnecessary simpa, 3 ambiguous open, 1 unused rcases pattern); wall time 22:31, 1850% CPU, peak memory 8,549,096 kB; the clone with its build takes 26 GB"
+    R4: "pass as predicted: 24 sorry lines, all in the ten statement files (CellLayerChallenge 3, CellLayerTheorems 3, CertificateChallenge 1, Challenge 3, CoerciveChallenge 4, ExtendedCertificateChallenge 3, ExtendedCoerciveChallenge 3, FractionalCellSystemChallenge 1, FractionalCertificateChallenge 1, FractionalChallenge 2); zero hits of any kind under Breakdown/ or in Solution.lean; zero hits for admit, native_decide, axiom, implemented_by, extern, unsafe, opaque anywhere"
+    R5: "pass: each of the nineteen comparator-named theorems, and each of the three consequences (certificate_breakdown_on_space, extended_certificate_breakdown_on_space, fractional_certificate_breakdown), depends on exactly propext, Classical.choice, Quot.sound, with Solution imported (R5_rerun.txt; the first file, R5.txt, was defective, see amendment A1)"
+    R6: "pass: the nineteen types, 303 printed lines, are byte-identical between the environment importing each statement file and the environment importing Solution (R6_diff_rerun.txt, diff exit 0); a textual comparison, not the claimants' comparator"
+    R7: "recorded in R7.txt: BreakdownOnSpace says that for every viscosity there is a smooth, compactly supported, divergence-free datum on R^3 with no smooth solution of bounded energy on [0, infinity); BreakdownOnTorus the same for a datum of period one with periodic velocity; breakdown_on_space has type PeriodicSimilarityProfileExists -> BreakdownOnSpace, where the hypothesis is the existence of a smooth self-similar profile with the stated decay; DeepMind's navier_stokes_existence_and_smoothness_R3 at 2207c54d is pinned in claim.yaml for the reading"
+  misses:
+    - "R3: predicted a wall time between 1 and 12 hours. The build took 22 minutes 31 seconds. The bracket was set from the Riemann archive's size ratio and was too cautious by a factor of about three at the low end; the exit code, error count and memory were as predicted. The failure the pre-registration named as a real possibility did not occur: the patched cell-layer files and the proofs that depend on them compile."
+spoken: >
+  The Lean package Alpöge and Buckmaster posted on 20 November builds in full on a machine they have never touched,
+  in twenty-three minutes, with nothing left open in the proof library and nothing beyond Lean's three standard
+  axioms behind any of the nineteen theorems their own comparator files name. The statement files and the solution
+  state those theorems identically. The holes the scan finds are the ones the authors describe: the statement files
+  carry sorry by design, and the solution fills them. What the build shows is narrower than the paper's claim. Every
+  route to blow-up in the package starts from a hypothesis the package does not discharge: a self-similar profile, a
+  certificate, or cell-system data. The certificate the paper names by hash is not in the repository, so nothing
+  here concludes that the Navier–Stokes equations blow up. It concludes that a certificate of the stated form would
+  make them.
+finding_ids:
+  - F1
+gap_ids:
+  - EG1

@@ -1,0 +1,32 @@
+def Breakdown.BreakdownOnSpace : Prop :=
+∀ ν > 0,
+  ∃ u₀,
+    ContDiff ℝ (↑⊤) u₀ ∧
+      HasCompactSupport u₀ ∧
+        (∀ (x : Breakdown.Space), Breakdown.divergenceAt u₀ x = 0) ∧
+          ¬∃ u p,
+              Breakdown.IsSmoothSolution ν u₀ u p ∧
+                ∃ C, ∀ t ≥ 0, ∫⁻ (x : Breakdown.Space), ENNReal.ofReal (‖u t x‖ ^ 2) ≤ ENNReal.ofReal C
+def Breakdown.BreakdownOnTorus : Prop :=
+∀ ν > 0,
+  ∃ u₀,
+    ContDiff ℝ (↑⊤) u₀ ∧
+      (∀ (i : Fin 3) (x : Breakdown.Space), u₀ (x + Breakdown.unitVector i) = u₀ x) ∧
+        (∀ (x : Breakdown.Space), Breakdown.divergenceAt u₀ x = 0) ∧
+          ¬∃ u p,
+              Breakdown.IsSmoothSolution ν u₀ u p ∧
+                ∀ t ≥ 0, ∀ (i : Fin 3) (x : Breakdown.Space), u t (x + Breakdown.unitVector i) = u t x
+theorem Breakdown.breakdown_on_space : Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnSpace :=
+⋯
+def Breakdown.PeriodicSimilarityProfileExists : Prop :=
+∃ W q P R C,
+  0 < P ∧
+    (ContDiff ℝ ↑⊤ fun z => W z.1 z.2) ∧
+      (ContDiff ℝ ↑⊤ fun z => q z.1 z.2) ∧
+        (∀ (s : ℝ) (y : Breakdown.Space), Breakdown.SimilarityResidual W q s y = 0) ∧
+          (∀ (s : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (W s) y = 0) ∧
+            (∀ (s : ℝ) (y : Breakdown.Space), W (s + P) y = R (W s (R.symm y))) ∧
+              (∃ s y, W s y ≠ 0) ∧
+                (∀ (s : ℝ) (y : Breakdown.Space), ∀ j ≤ 2, ‖iteratedFDeriv ℝ j (W s) y‖ ≤ C / (1 + ‖y‖) ^ (j + 1)) ∧
+                  ∀ (s : ℝ) (y : Breakdown.Space), ‖fderiv ℝ (q s) y‖ ≤ C / (1 + ‖y‖) ^ 3
+exit 0

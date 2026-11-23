@@ -1,0 +1,6 @@
+'Breakdown.breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+/home/heidibennett.guest/nm-scripts/NS_Axioms.lean:3:43: error: unexpected identifier; expected command
+'Breakdown.certificate_breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.extended_certificate_breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.fractional_certificate_breakdown' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 1

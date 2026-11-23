@@ -1,0 +1,4 @@
+Breakdown.breakdown_on_space : Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnSpace
+Breakdown.breakdown_on_torus : Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnTorus
+Breakdown.breakdown_on_space_of_weak : Breakdown.WeakPeriodicSimilarityProfileExists → Breakdown.BreakdownOnSpace
+exit 0

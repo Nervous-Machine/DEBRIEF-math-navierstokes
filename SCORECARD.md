@@ -6,12 +6,13 @@ _Rendered from the briefing record. Items marked internal in the ledger (how the
 
 Record quality: full ledger. Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.
 
-**Standing.** Certified 0. Accepted 0. Refuted 0. Open gaps 5. An open gap is an input or question nobody has settled; it is not a finding and has no standing.
+**Standing.** Certified 0. Accepted 1. Refuted 0. Open gaps 5. An open gap is an input or question nobody has settled; it is not a finding and has no standing.
 
 ## Findings
 
 | id | kind | standing | basis | cycles |
 |---|---|---|---|---|
+| F1 | learned | **accepted** | one pre-registered build by a party independent of the claimants; certified needs a second independent party's report under the certification rule, which is under revision (see DEBRIEF-math-riemann EG5) | 1 |
 
 ## Cycles, in order
 
@@ -19,12 +20,13 @@ Record quality: full ledger. Opened at tier zero: the claim and its artifacts ar
 |---|---|---|---|---|---|
 | 0 | 2026-09-07 to 2026-11-22 |  | replay | no | admitted |
 | pages-2026-11-22 | 2026-11-22 | None | replay | no | admitted |
+| 1 | 2026-11-22 | Nervous Machine (Heidi Bennett; Claude Fable 5.1 as the operating agent) | rerun | yes | confirmed |
 
 ## Gaps, in the order that would settle things fastest
 
 | priority | gap | status | closes with | who could act | signal expected | resolution by |
 |---|---|---|---|---|---|---|
-| 1 | The Lean development has not been built or kernel-checked by anyone outside the claimant | proposed | a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms | anyone with a machine and a few hours | a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem | none registered |
+| 1 | The Lean development has not been built or kernel-checked by anyone outside the claimant | in cycle | a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms | anyone with a machine and a few hours | a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem | none registered |
 | 2 | Do the formal statements say what the problem asks? | proposed | a machine comparison of the claimant's main theorem with the third-party formal statement navier_stokes_existence_and_smoothness_R3 in google-deepmind/formal-conjectures, then a human read of any difference; two independent mathematicians read the formal statement against the problem as posed and sign, or refuse | anyone who can read Lean; the two statements are public; a mathematician in the problem's area, about an hour with a reading guide | a trace cycle and two signed read cycles, or a refusal naming the difference | none registered |
 | 3 | No independent mathematician has reported reading the proof, and there is no referee report | proposed | a read cycle by a mathematician in the area who is not an author, signing or refusing each main step; a referee report or journal acceptance, recorded by date | a mathematician in the problem's area; a journal; the record notes the date when it happens | a signed or refused read cycle; a dated referee report | none registered |
 | 4 | The certificate the proof rests on is named by hash and not released | proposed | the authors release the certificate, matching the hash 3f7a335b84b6c7631742cacc5343dfcd11cf72f5221ff79b2b9268790b4b22c5 given in the paper, and the interval-arithmetic program that checks it against the conditions of Appendix B, pinned by hash and date; then an independent rerun of that check | the authors; then anyone with FLINT and Arb and a few hours | a data cycle pinning the certificate and program, whose hash matches the paper's; then a rerun cycle reporting the check's result | none registered |

@@ -1,0 +1,9 @@
+/home/heidibennett.guest/nm-scripts/NS_Sol_Types.lean:3:37: error: Application type mismatch: The argument
+  Breakdown.breakdown_on_torus
+has type
+  Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnTorus
+but is expected to have type
+  Breakdown.PeriodicSimilarityProfileExists
+in the application
+  ⋯
+exit 1

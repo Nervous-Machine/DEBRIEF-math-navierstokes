@@ -1,0 +1,5 @@
+import CellLayerTheorems
+set_option pp.proofs false
+#check @Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition
+#check @Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition
+#check @Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition

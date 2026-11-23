@@ -1,0 +1,31 @@
+'Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Breakdown.breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.breakdown_on_torus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.breakdown_on_space_of_weak' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.certificate_orbit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.ModeWeights.multiplier_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.ModeWeights.mode_azimuthal_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.ModeWeights.stretch_mean_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.ModeWeights.multiplierInequality_of_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.PieceWeights.piece_multiplier_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.PieceWeights.multiplierInequality_of_pieceDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.extended_certificate_orbit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.CoerciveWeak.extendedCoerciveClause_of_pieceData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.CellCert.CellSystem.fractional_breakdown_of_cell_system' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Breakdown.SteadyCert.fracCertificate_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.fractional_breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.fractional_breakdown_on_torus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.certificate_breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.extended_certificate_breakdown_on_space' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Breakdown.fractional_certificate_breakdown' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

@@ -1,0 +1,21 @@
+import Solution
+set_option pp.proofs false
+#check @Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition
+#check @Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition
+#check @Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition
+#check @Breakdown.breakdown_on_space
+#check @Breakdown.breakdown_on_torus
+#check @Breakdown.breakdown_on_space_of_weak
+#check @Breakdown.certificate_orbit
+#check @Breakdown.ModeWeights.multiplier_density
+#check @Breakdown.ModeWeights.mode_azimuthal_gain
+#check @Breakdown.ModeWeights.stretch_mean_bound
+#check @Breakdown.ModeWeights.multiplierInequality_of_density
+#check @Breakdown.PieceWeights.piece_multiplier_density
+#check @Breakdown.PieceWeights.multiplierInequality_of_pieceDensity
+#check @Breakdown.extended_certificate_orbit
+#check @Breakdown.CoerciveWeak.extendedCoerciveClause_of_pieceData
+#check @Breakdown.CellCert.CellSystem.fractional_breakdown_of_cell_system
+#check @Breakdown.SteadyCert.fracCertificate_profile
+#check @Breakdown.fractional_breakdown_on_space
+#check @Breakdown.fractional_breakdown_on_torus

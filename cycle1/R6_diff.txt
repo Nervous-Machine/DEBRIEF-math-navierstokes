@@ -1,0 +1,314 @@
+1,303c1,8
+<                                                                             Breakdown.periodPairing (d.actuator i) M -
+<                                                                           Breakdown.pinValue (d.pin i) G) ^
+<                                                                           κ i *
+<                                                                         2))) →
+<                                                                         Breakdown.periodBallNorm d.ballRadius F ^ 2 -
+<                                                                         Breakdown.pinValue (d.pin i) G) ^
+<                                                                         Breakdown.pinValue (d.pin i) G) ^
+<                                                                         κ i * Breakdown.periodPairing (d.actuator i) M -
+<                                                                         κ i * Breakdown.periodPairing (d.actuator i) M -
+<                                                                         ∑ i,
+<                                                                       (Breakdown.vecNorm fun i =>
+<                                                                       2) +
+<                                                                       2))) →
+<                                                                       Breakdown.periodBallNorm d.ballRadius F ^ 2 -
+<                                                                       Breakdown.periodBallNorm d.ballRadius F ^ 2 -
+<                                                                       Breakdown.pinValue (d.pin i) G) ^
+<                                                                       c * K ^ 2 *
+<                                                                       κ i * Breakdown.periodPairing (d.actuator i) M -
+<                                                                       ∑ i,
+<                                                                       ∑ i,
+<                                                                     (Breakdown.vecNorm fun i =>
+<                                                                     (Breakdown.vecNorm fun i =>
+<                                                                     (d.profile p) σ y ≤
+<                                                                     (d.profile p) σ y) +
+<                                                                     2) +
+<                                                                     Breakdown.periodBallNorm d.ballRadius F ^ 2 -
+<                                                                     c * K ^ 2 *
+<                                                                     c * K ^ 2 *
+<                                                                     t *
+<                                                                     ∑ i,
+<                                                                   (Breakdown.vecNorm fun i =>
+<                                                                   (d.profile p) σ y <
+<                                                                   (d.profile p) σ y ≤
+<                                                                   (d.profile p) σ y) +
+<                                                                   (m p).densityNeg (d.period p) (b p) d.weightFn v G H
+<                                                                   (m p).densityPos (d.period p) (b p) d.weightFn v G H
+<                                                                   c * K ^ 2 *
+<                                                                   t *
+<                                                                   t *
+<                                                                 (-(c * ∑ i, κ i ^ 2 -
+<                                                                 (c * ∑ i, κ i ^ 2 -
+<                                                                 (d.profile p) σ y <
+<                                                                 (m p).densityNeg (d.period p) (b p) d.weightFn v G H
+<                                                                 (m p).densityNeg (d.period p) (hs p) d.weightFn v G H
+<                                                                 (m p).densityPos (d.period p) (hs p) d.weightFn v G H
+<                                                                 t *
+<                                                                 ∫⁻ (y : Breakdown.Space),
+<                                                                 ∫⁻ (y : Breakdown.Space),
+<                                                               (-(c * ∑ i, κ i ^ 2 -
+<                                                               (c * ∑ i, κ i ^ 2 -
+<                                                               (m p).densityNeg (d.period p) (hs p) d.weightFn v G H
+<                                                               ENNReal.ofReal
+<                                                               ∫⁻ (y : Breakdown.Space),
+<                                                               ∫⁻ (y : Breakdown.Space),
+<                                                               ∫⁻ (y : Breakdown.Space),
+<                                                               ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                             (∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                             ENNReal.ofReal
+<                                                             ∫⁻ (y : Breakdown.Space),
+<                                                             ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                             ⊤ ∧
+<                                                           (∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                           ENNReal.ofReal
+<                                                           ⊤ ∧
+<                                                         ENNReal.ofReal
+<                                                         ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                       (m p).IsMultiplierField v G H M →
+<                                                       ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                                     (m p).IsMultiplierField v G H M →
+<                                                     m.cμ * (m.frequencySeminormSq P v).toReal) ∧
+<                                                     ∀ (M : ℝ → Breakdown.Space → Breakdown.Space),
+<                                                   Breakdown.IsRightSide (d.profile p) d.actuator κ v G g F →
+<                                                   m.cμ * (m.seminormSq P v).toReal) ∧
+<                                                   ∀ (M : ℝ → Breakdown.Space → Breakdown.Space),
+<                                                   ∫⁻ (y : Breakdown.Space), m.densityNeg P b w v G H W σ y
+<                                                   ∫⁻ (y : Breakdown.Space), m.densityPos P b w v G H W σ y) +
+<                                                 (Breakdown.periodLIntegral fun σ y => ‖F σ y‖ ^ 2) < ⊤ →
+<                                                 Breakdown.IsRightSide (d.profile p) d.actuator κ v G g F →
+<                                                 ENNReal.ofReal (-m.multiplierGap P w act v G H κ F M) ≤
+<                                                 MeasureTheory.volume →
+<                                                 √(m.c * Breakdown.weightedEnergy w G H +
+<                                                 ∫⁻ (y : Breakdown.Space), m.densityNeg P h w v G H W σ y
+<                                                 ∫⁻ (y : Breakdown.Space), m.densityPos P h w v G H W σ y) +
+<                                                 ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                               (Breakdown.periodLIntegral fun σ y => ‖F σ y‖ ^ 2) < ⊤ →
+<                                               Breakdown.IsTimePeriodic F →
+<                                               Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<                                               ENNReal.ofReal (-m.multiplierGap P w act v G H κ F M) ≤
+<                                               ENNReal.ofReal (m.multiplierGap P w act v G H κ F M) +
+<                                               m.multiplierConstant w₀ epsSup epsGradSup ratio *
+<                                               √(m.c * Breakdown.weightedEnergy w G H +
+<                                               ∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                             (∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                             Breakdown.IsTimePeriodic F →
+<                                             Breakdown.Space →
+<                                             ENNReal.ofReal (m.multiplierGap P w act v G H κ F M) +
+<                                             MeasureTheory.AEStronglyMeasurable (fun z => F z.1 z.2)
+<                                             √((1 + epsSup + epsGradSup / √w₀) ^ 2 / m.c + ratio / m.cμ) *
+<                                           (∫⁻ (σ : ℝ) in Set.Icc 0 1,
+<                                           Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<                                           Breakdown.periodNorm M ≤
+<                                           MeasureTheory.AEStronglyMeasurable (fun z => F z.1 z.2) MeasureTheory.volume →
+<                                           ℝ →
+<                                           ∀ (κ : Fin k → ℝ) (F : ℝ → Breakdown.Space → Breakdown.Space),
+<                                         (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<                                         (H :
+<                                         (g : ℝ → Breakdown.Space → Breakdown.Space),
+<                                         Breakdown.IsPerturbation d.symmetries (d.period p) v G H g →
+<                                         Breakdown.periodNorm M ≤
+<                                         m.frequencySeminormSq P v < ⊤ ∧
+<                                         ℝ →
+<                                         ∀ (κ : Fin k → ℝ) (F : ℝ → Breakdown.Space → Breakdown.Space),
+<                                       (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<                                       (H :
+<                                       (g : ℝ → Breakdown.Space → Breakdown.Space),
+<                                       (√((1 + epsSup + epsGradSup / √d.weight) ^ 2 / c + ratio / cμ)) K
+<                                       Breakdown.IsPerturbation d.symmetries (d.period p) v G H g →
+<                                       m.IsMultiplierField v G H M ∧
+<                                       m.seminormSq P v < ⊤ ∧
+<                                       ∀ (v : ℝ → Breakdown.Space → Breakdown.Space)
+<                                     (√((1 + epsSup + epsGradSup / √d.weight) ^ 2 / c + ratio / cμ)) K
+<                                     Breakdown.MultiplierInequality d c cμ t
+<                                     epsGradSup ratio) →
+<                                     m.IsMultiplierField v G H M ∧
+<                                     ∀ (v : ℝ → Breakdown.Space → Breakdown.Space)
+<                                     ∃ M,
+<                                   (m p).IsAdmissible (d.period p) (b p) d.weightFn d.weight epsSup epsGradSup ratio) →
+<                                   (m p).IsAdmissible (d.period p) (hs p) d.weightFn (d.profile p) d.weight epsSup
+<                                   (∀ p ∈ d.box,
+<                                   Breakdown.IsRightSide W act κ v G g F →
+<                                   Breakdown.MultiplierInequality d c cμ t
+<                                   ∃ M,
+<                                 (Breakdown.periodLIntegral fun σ y => ‖F σ y‖ ^ 2) < ⊤ →
+<                                 (∀ p ∈ d.box,
+<                                 (∀ p ∈ d.box, (b p).IsValid (m p) (d.profile p)) →
+<                                 Breakdown.IsRightSide W act κ v G g F →
+<                               (Breakdown.periodLIntegral fun σ y => ‖F σ y‖ ^ 2) < ⊤ →
+<                               (HW q) d.weight epsSup epsGradSup ratio) →
+<                               (∀ p ∈ d.box,
+<                               (∀ p ∈ d.box,
+<                               Breakdown.IsTimePeriodic F →
+<                               √(t / c) ≤ d.coercivePin → Breakdown.CoerciveWeak.ExtendedCoerciveClause d
+<                             0 ≤ K →
+<                             0 ≤ K →
+<                             Breakdown.CoerciveWeak.IsAdmissibleWeak (m q) (d.period q) (hs q) d.weightFn (d.model q)
+<                             Breakdown.IsTimePeriodic F →
+<                             MeasureTheory.AEStronglyMeasurable (fun z => F z.1 z.2) MeasureTheory.volume →
+<                             √((1 + epsSup + epsGradSup / √d.weight) ^ 2 / c + ratio / cμ) / √c ≤ d.coerciveL2 →
+<                           0 ≤ t →
+<                           0 ≤ t →
+<                           Breakdown.CoerciveWeak.RowRestClause d m hs HW c t →
+<                           MeasureTheory.AEStronglyMeasurable (fun z => F z.1 z.2) MeasureTheory.volume →
+<                           ∀ (κ : Fin k → ℝ) (F : ℝ → Breakdown.Space → Breakdown.Space),
+<                         (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<                         (H : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<                         (g : ℝ → Breakdown.Space → Breakdown.Space),
+<                         (∀ p ∈ d.box, (m p).cμ = cμ) →
+<                         (∀ p ∈ d.box, (m p).cμ = cμ) →
+<                         (∀ q ∈ d.params,
+<                         Breakdown.IsPerturbation Γ P v G H g →
+<                         ∀ (κ : Fin k → ℝ) (F : ℝ → Breakdown.Space → Breakdown.Space),
+<                         ∫ (φ : ℝ) in 0..2 * Real.pi, Breakdown.stretchForm W v G σ (Breakdown.axialRot φ y)) ≤
+<                       (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<                       (H : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<                       (g : ℝ → Breakdown.Space → Breakdown.Space),
+<                       (hs : (Fin k → ℝ) → Breakdown.HarmonicBounds) {c cμ t K epsSup epsGradSup ratio : ℝ},
+<                       (∀ p ∈ d.box, (m p).c = c) →
+<                       (∀ p ∈ d.box, (m p).c = c) →
+<                       0 ≤ t →
+<                       Breakdown.IsPerturbation Γ P v G H g →
+<                       {c cμ t K epsSup epsGradSup ratio : ℝ},
+<                       ∀ (v : ℝ → Breakdown.Space → Breakdown.Space)
+<                     (-∫ (σ : ℝ) in Set.Icc 0 1,
+<                     (∀ (i : Fin k), (Breakdown.periodLIntegral fun σ y => ‖act i σ y‖ ^ 2) < ⊤) →
+<                     (∀ q ∈ d.params, (m q).cμ = cμ) →
+<                     ∀ (v : ℝ → Breakdown.Space → Breakdown.Space)
+<                     ∀ {C : Type} (m : (Fin k → ℝ) → Breakdown.ModeWeights C) (b : (Fin k → ℝ) → Breakdown.FlowBounds C)
+<                     ∀ {C : Type} {nE nM : ℕ} (m : (Fin k → ℝ) → Breakdown.PieceWeights C nE nM)
+<                   (hs : (Fin k → ℝ) → Breakdown.HarmonicBounds) {c cμ t epsSup epsGradSup ratio : ℝ},
+<                   (∀ (i : Fin k), (Breakdown.periodLIntegral fun σ y => ‖act i σ y‖ ^ 2) < ⊤) →
+<                   (∀ (i : Fin k), (Breakdown.periodLIntegral fun σ y => ‖d.actuator i σ y‖ ^ 2) < ⊤) →
+<                   (∀ (i : Fin k), (Breakdown.periodLIntegral fun σ y => ‖d.actuator i σ y‖ ^ 2) < ⊤) →
+<                   (∀ (i : Fin k), Breakdown.IsTimePeriodic (act i)) →
+<                   (∀ q ∈ d.params, (m q).c = c) →
+<                   ENNReal.ofReal (2 * Real.pi) * ∑' (ι : ℤ × ℤ), ENNReal.ofReal (m.stretchCharge b v G ι 0 y)
+<                 (∀ (i : Fin k), Breakdown.IsTimePeriodic (act i)) →
+<                 (∀ (i : Fin k), Breakdown.IsTimePeriodic (d.actuator i)) →
+<                 (∀ (i : Fin k), Breakdown.IsTimePeriodic (d.actuator i)) →
+<                 (∀ (i : Fin k), MeasureTheory.AEStronglyMeasurable (fun z => act i z.1 z.2) MeasureTheory.volume) →
+<                 ENNReal.ofReal
+<                 ∀ j ≤ 2, ‖iteratedFDeriv ℝ j (d.profile p σ) y‖ ≤ d.decay / (1 + ‖y‖) ^ (j + 1)) →
+<                 ∀ j ≤ 2, ‖iteratedFDeriv ℝ j (d.profile p σ) y‖ ≤ d.decay / (1 + ‖y‖) ^ (j + 1)) →
+<                 ∀ {C : Type} {nE nM : ℕ} (m : (Fin k → ℝ) → Breakdown.PieceWeights C nE nM)
+<               (D : (Fin k → ℝ) → ℝ),
+<               (∀ (i : Fin k), MeasureTheory.AEStronglyMeasurable (fun z => act i z.1 z.2) MeasureTheory.volume) →
+<               (∀ (i : Fin k), MeasureTheory.AEStronglyMeasurable (fun z => d.actuator i z.1 z.2) MeasureTheory.volume) →
+<               (∀ (i : Fin k), MeasureTheory.AEStronglyMeasurable (fun z => d.actuator i z.1 z.2) MeasureTheory.volume) →
+<               (∀ q ∈ d.params, Breakdown.CoerciveWeak.IsWeakSecondDerivState (d.model q) (HW q) (D q)) →
+<               (∃ B, ∀ (y : Breakdown.Space), w y ≤ B) →
+<               Breakdown.cnormSq (Breakdown.modeGrad ι G z.1 z.2) ∧
+<               Breakdown.cnormSq (Breakdown.modeSecondDeriv ι H z.1 z.2)
+<               ∀ (σ : ℝ) (y : Breakdown.Space),
+<               ∀ (σ : ℝ) (y : Breakdown.Space),
+<               ∀ᵐ (y : Breakdown.Space),
+<             (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<             (H : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<             (g : ℝ → Breakdown.Space → Breakdown.Space),
+<             (|↑ι.2| - 2) ^ 2 / Breakdown.cylRadius z.2 ^ 2 * Breakdown.cnormSq (Breakdown.modeGrad ι G z.1 z.2) ≤
+<             (∀ (y : Breakdown.Space), d.weightFn y ≤ d.weightMax) →
+<             (∀ (y : Breakdown.Space), d.weightFn y ≤ d.weightMax) →
+<             (∃ B, ∀ (y : Breakdown.Space), w y ≤ B) →
+<             (∃ D, ∀ (σ : ℝ) (y : Breakdown.Space), ∀ j ≤ 2, ‖iteratedFDeriv ℝ j (W σ) y‖ ≤ D / (1 + ‖y‖) ^ (j + 1)) →
+<             Breakdown.IsPerturbation Γ P v G H g →
+<             ∀ (HW : (Fin k → ℝ) → ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<           (|↑ι.2| - 1) ^ 2 / Breakdown.cylRadius z.2 ^ 2 * Breakdown.cnormSq (Breakdown.modeVel ι v z.1 z.2) ≤
+<           (∀ (σ : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (W σ) y = 0) →
+<           (∀ p ∈ d.box,
+<           (∀ p ∈ d.box,
+<           (∃ D, ∀ (σ : ℝ) (y : Breakdown.Space), ∀ j ≤ 2, ‖iteratedFDeriv ℝ j (W σ) y‖ ≤ D / (1 + ‖y‖) ^ (j + 1)) →
+<           (∑ i, Breakdown.periodLIntegral fun σ y => ‖d.actuator i σ y‖ ^ 2) ≤ ENNReal.ofReal (d.actuatorBound ^ 2) →
+<           ∀ (v : ℝ → Breakdown.Space → Breakdown.Space)
+<         (∀ (i : Fin k), Breakdown.IsTimePeriodic (d.actuator i)) →
+<         (∀ (y : Breakdown.Space), 0 < m.len y) →
+<         (∀ (σ : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (W σ) y = 0) →
+<         (∀ p ∈ d.box, ∀ (σ : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (d.profile p σ) y = 0) →
+<         (∀ p ∈ d.box, ∀ (σ : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (d.profile p σ) y = 0) →
+<         Breakdown.IsTimePeriodic W →
+<         ∀ᵐ (z : ℝ × Breakdown.Space),
+<       (ContDiff ℝ 2 fun z => W z.1 z.2) →
+<       (∀ (i : Fin k), MeasureTheory.AEStronglyMeasurable (fun z => d.actuator i z.1 z.2) MeasureTheory.volume) →
+<       (∀ (p : Fin k → ℝ), Breakdown.IsTimePeriodic (d.profile p)) →
+<       (∀ (p : Fin k → ℝ), Breakdown.IsTimePeriodic (d.profile p)) →
+<       (∀ (σ : ℝ) (y : Breakdown.Space), Breakdown.divergenceAt (W σ) y = 0) →
+<       2 ≤ |ι.2| →
+<       Breakdown.IsTimePeriodic W →
+<     (ContDiff ℝ 2 fun q => d.profile q.1 q.2.1 q.2.2) →
+<     (ContDiff ℝ 2 fun q => d.profile q.1 q.2.1 q.2.2) →
+<     (ContDiff ℝ 2 fun z => W z.1 z.2) →
+<     (ContDiff ℝ 2 fun z => W z.1 z.2) →
+<     (∀ (y : Breakdown.Space), d.weightFn y ≤ d.weightMax) →
+<     Breakdown.FractionalBreakdownOnSpace (501 / 500) ∧ Breakdown.FractionalBreakdownOnTorus (501 / 500)
+<     b.IsValid m W →
+<     ∀ (ι : ℤ × ℤ),
+<   (A : Breakdown.CellCert.GivenFields.AuxData k) (M : Breakdown.CellCert.GivenModel.CellMesh)
+<   (B : Breakdown.CellLayerSystem.ReductionEntries k),
+<   (B : Breakdown.CellLayerSystem.ReductionEntries k),
+<   (B : Breakdown.CellLayerSystem.ReductionEntries k),
+<   (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+<   (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+<   (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+<   (H : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space →L[ℝ] Breakdown.Space)
+<   (MD : Breakdown.CellCert.GivenModel.ModelData M k) (RD : Breakdown.CellCert.GivenModel.RowData M N)
+<   (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+<   (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+<   (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+<   (W : ℝ → Breakdown.Space → Breakdown.Space) (act : Fin k → ℝ → Breakdown.Space → Breakdown.Space)
+<   (W : ℝ → Breakdown.Space → Breakdown.Space) (act : Fin k → ℝ → Breakdown.Space → Breakdown.Space)
+<   (X : Breakdown.CellCert.CellSystem.CellSystemData k N M),
+<   (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+<   (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+<   (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+<   (b : Breakdown.FlowBounds C) (w : Breakdown.Space → ℝ) {k : ℕ} (Γ : Set Breakdown.Symmetry)
+<   (b : Breakdown.FlowBounds C) (Γ : Set Breakdown.Symmetry) (W : ℝ → Breakdown.Space → Breakdown.Space),
+<   (c : Breakdown.CellCert.FracCellData k N) (D : Breakdown.CellCert.GivenFields.ProfileData k)
+<   (g : ℝ → Breakdown.Space → Breakdown.Space),
+<   (h : Breakdown.HarmonicBounds) (w : Breakdown.Space → ℝ) {k : ℕ} (Γ : Set Breakdown.Symmetry)
+<   (v : ℝ → Breakdown.Space → Breakdown.Space) (G : ℝ → Breakdown.Space → Breakdown.Space →L[ℝ] Breakdown.Space)
+<   (∀ (i : Fin k), 0 ≤ d.radius i) →
+<   (∀ (i : Fin k), 0 ≤ d.radius i) →
+<   (∀ j ∈ d.adjointSet, 0 ≤ d.radius j) →
+<   1 < α → α < 5 / 4 → Breakdown.RotatingFractionalProfileExists α → Breakdown.FractionalBreakdownOnSpace α
+<   1 < α → α < 5 / 4 → Breakdown.RotatingFractionalProfileExists α → Breakdown.FractionalBreakdownOnTorus α
+<   1 < α → α < 5 / 4 → Breakdown.SteadyCert.FracCertificateHypothesis α → Breakdown.RotatingFractionalProfileExists α
+<   Breakdown.CellCert.CellSystem.CellSystemCondition c D A M MD RD X →
+<   Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnSpace
+<   Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnSpace ∧ Breakdown.BreakdownOnTorus
+<   Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnTorus
+<   Breakdown.IsPerturbation Γ P v G H g →
+<   Breakdown.WeakPeriodicSimilarityProfileExists
+<   b.IsValid m W →
+<   m.IsAdmissible P b w w₀ epsSup epsGradSup ratio →
+<   m.IsAdmissible P h w W w₀ epsSup epsGradSup ratio →
+<   {w₀ epsSup epsGradSup ratio : ℝ},
+<   {w₀ epsSup epsGradSup ratio : ℝ},
+< @Breakdown.CellCert.CellSystem.fractional_breakdown_of_cell_system : ∀ {k N : ℕ}
+< @Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+< @Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+< @Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+< @Breakdown.CoerciveWeak.extendedCoerciveClause_of_pieceData : ∀ {k : ℕ} {d : Breakdown.ExtendedCertificateData k},
+< @Breakdown.ModeWeights.multiplierInequality_of_density : ∀ {k : ℕ} {d : Breakdown.CertificateData k},
+< @Breakdown.ModeWeights.multiplier_density : ∀ {C : Type} (m : Breakdown.ModeWeights C) (P : ℝ)
+< @Breakdown.ModeWeights.stretch_mean_bound : ∀ {C : Type} (m : Breakdown.ModeWeights C) (P : ℝ)
+< @Breakdown.PieceWeights.multiplierInequality_of_pieceDensity : ∀ {k : ℕ} {d : Breakdown.CertificateData k},
+< @Breakdown.PieceWeights.piece_multiplier_density : ∀ {C : Type} {nE nM : ℕ} (m : Breakdown.PieceWeights C nE nM) (P : ℝ)
+< Breakdown.ModeWeights.mode_azimuthal_gain : ∀ (P : ℝ) (Γ : Set Breakdown.Symmetry)
+< Breakdown.SteadyCert.fracCertificate_profile : ∀ (α : ℝ),
+< Breakdown.breakdown_on_space : Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnSpace
+< Breakdown.breakdown_on_space_of_weak : Breakdown.WeakPeriodicSimilarityProfileExists → Breakdown.BreakdownOnSpace
+< Breakdown.breakdown_on_torus : Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnTorus
+< Breakdown.certificate_orbit : Breakdown.CertificateHypothesis → Breakdown.WeakPeriodicSimilarityProfileExists
+< Breakdown.extended_certificate_orbit : Breakdown.ExtendedCertificateHypothesis →
+< Breakdown.fractional_breakdown_on_space : ∀ (α : ℝ),
+< Breakdown.fractional_breakdown_on_torus : ∀ (α : ℝ),
+---
+>   Breakdown.PeriodicSimilarityProfileExists
+>   Breakdown.PeriodicSimilarityProfileExists → Breakdown.BreakdownOnTorus
+>   Breakdown.breakdown_on_torus
+>   ⋯
+> /home/heidibennett.guest/nm-scripts/NS_Sol_Types.lean:3:37: error: Application type mismatch: The argument
+> but is expected to have type
+> has type
+> in the application
+diff exit 1

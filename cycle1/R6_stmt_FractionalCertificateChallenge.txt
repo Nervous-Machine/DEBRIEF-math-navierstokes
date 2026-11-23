@@ -1,0 +1,3 @@
+Breakdown.SteadyCert.fracCertificate_profile : ∀ (α : ℝ),
+  1 < α → α < 5 / 4 → Breakdown.SteadyCert.FracCertificateHypothesis α → Breakdown.RotatingFractionalProfileExists α
+exit 0

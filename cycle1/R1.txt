@@ -1,0 +1,8 @@
+HEAD ad53419de079eb8f95f60313473374624a348546
+pinned ad53419de079eb8f95f60313473374624a348546
+ls-tree sha256 3acca24403b1f95803abe41c3a5b994c8607396fb46819b7806327ea9cae8015
+ls-tree entries 2285
+lean files under lean/ (excluding .lake): 2271
+lean lines: 616060
+toolchain: leanprover/lean4:v4.33.1
+11:rev = "0df444a360eaa60ab8c11dca51a86af692955474"

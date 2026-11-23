@@ -1,0 +1,42 @@
+## statement files (top-level *.lean)
+### pattern \bsorry\b
+./CellLayerChallenge.lean:7052:  sorry
+./CellLayerChallenge.lean:7073:  sorry
+./CellLayerChallenge.lean:7080:  sorry
+./CellLayerTheorems.lean:16:  sorry
+./CellLayerTheorems.lean:22:  sorry
+./CellLayerTheorems.lean:29:  sorry
+./CertificateChallenge.lean:220:  sorry
+./Challenge.lean:102:  sorry
+./Challenge.lean:105:  sorry
+./Challenge.lean:108:  sorry
+./CoerciveChallenge.lean:530:  sorry
+./CoerciveChallenge.lean:582:  sorry
+./CoerciveChallenge.lean:601:  sorry
+./CoerciveChallenge.lean:959:  sorry
+./ExtendedCertificateChallenge.lean:259:  sorry
+./ExtendedCertificateChallenge.lean:263:  sorry
+./ExtendedCertificateChallenge.lean:267:  sorry
+./ExtendedCoerciveChallenge.lean:213:  sorry
+./ExtendedCoerciveChallenge.lean:232:  sorry
+./ExtendedCoerciveChallenge.lean:368:  sorry
+./FractionalCellSystemChallenge.lean:4449:  sorry
+./FractionalCertificateChallenge.lean:337:  sorry
+./FractionalChallenge.lean:76:  sorry
+./FractionalChallenge.lean:80:  sorry
+### pattern \badmit\b
+### pattern native_decide
+### pattern ^\s*axiom\b
+### pattern implemented_by
+### pattern @\[extern
+### pattern \bunsafe\b
+### pattern ^\s*opaque\b
+## Breakdown/ and Solution.lean
+### pattern \bsorry\b
+### pattern \badmit\b
+### pattern native_decide
+### pattern ^\s*axiom\b
+### pattern implemented_by
+### pattern @\[extern
+### pattern \bunsafe\b
+### pattern ^\s*opaque\b

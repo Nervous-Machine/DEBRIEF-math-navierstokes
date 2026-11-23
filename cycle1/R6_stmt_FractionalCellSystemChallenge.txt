@@ -1,0 +1,8 @@
+@Breakdown.CellCert.CellSystem.fractional_breakdown_of_cell_system : ∀ {k N : ℕ}
+  (c : Breakdown.CellCert.FracCellData k N) (D : Breakdown.CellCert.GivenFields.ProfileData k)
+  (A : Breakdown.CellCert.GivenFields.AuxData k) (M : Breakdown.CellCert.GivenModel.CellMesh)
+  (MD : Breakdown.CellCert.GivenModel.ModelData M k) (RD : Breakdown.CellCert.GivenModel.RowData M N)
+  (X : Breakdown.CellCert.CellSystem.CellSystemData k N M),
+  Breakdown.CellCert.CellSystem.CellSystemCondition c D A M MD RD X →
+    Breakdown.FractionalBreakdownOnSpace (501 / 500) ∧ Breakdown.FractionalBreakdownOnTorus (501 / 500)
+exit 0

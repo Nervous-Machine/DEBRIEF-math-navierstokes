@@ -1,0 +1,19 @@
+@Breakdown.CellLayerSystem.breakdownOnSpace_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+  (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+  (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+  (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+  (B : Breakdown.CellLayerSystem.ReductionEntries k),
+  Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnSpace
+@Breakdown.CellLayerSystem.breakdownOnTorus_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+  (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+  (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+  (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+  (B : Breakdown.CellLayerSystem.ReductionEntries k),
+  Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnTorus
+@Breakdown.CellLayerSystem.breakdownOnSpaceAndTorus_of_cell_system_condition : ∀ {k : ℕ} {C : Type} {nE nM : ℕ}
+  (D : Breakdown.CertCell.CellLayerData k C nE nM) (X : Breakdown.CertCell.Instance.InstanceData k C nE nM)
+  (R : Breakdown.CertCell.CellCalculus.CellCalculusEntry D) (T : Breakdown.CertCell.TreeEntry D R)
+  (Y : Breakdown.CertCell.CellLayerEntries D R T) (N : Breakdown.CellLayerSystem.CoerciveNumbers)
+  (B : Breakdown.CellLayerSystem.ReductionEntries k),
+  Breakdown.CellLayerSystem.CellSystemCondition D X R T Y N B → Breakdown.BreakdownOnSpace ∧ Breakdown.BreakdownOnTorus
+exit 0

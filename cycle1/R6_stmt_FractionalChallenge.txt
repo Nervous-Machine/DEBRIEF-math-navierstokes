@@ -1,0 +1,5 @@
+Breakdown.fractional_breakdown_on_space : ∀ (α : ℝ),
+  1 < α → α < 5 / 4 → Breakdown.RotatingFractionalProfileExists α → Breakdown.FractionalBreakdownOnSpace α
+Breakdown.fractional_breakdown_on_torus : ∀ (α : ℝ),
+  1 < α → α < 5 / 4 → Breakdown.RotatingFractionalProfileExists α → Breakdown.FractionalBreakdownOnTorus α
+exit 0
