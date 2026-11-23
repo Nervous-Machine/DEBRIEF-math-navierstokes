@@ -1,23 +1,73 @@
-# Pre-registration for the first rerun of this claim's Lean development. Fill in, then register BEFORE running:
-#   python3 <DEBRIEF>/tools/prereg.py register prereg_rerun.yaml   (writes prereg_rerun.yaml.sha256; commit both)
+# Pre-registration, cycle 1: first independent build of the Lean package released by Levent Alpöge and Tristan
+# Buckmaster on 2026-11-20. Written 2026-11-22 BEFORE any build ran. Changes after this point go in an amendment at
+# the end of this file, not in the body. The VM, elan and the pinned toolchain were installed earlier for another
+# record and are not a check. Pinning the repository and the paper by hash preceded this file (claim.yaml, cycle 0).
+
 mission: DEBRIEF-math-navierstokes
-by: "<your name as you want it recorded>"
-dated: "<YYYY-MM-DD>"
-question: "Does the claimant's Lean development build at the pinned commit on an independent machine, with no sorry or admit, and which axioms does the main theorem use?"
-rule: "All checks below pass as predicted; any miss is recorded under misses."
+cycle: 1
+by: "Nervous Machine (Heidi Bennett; Claude Fable 5.1 as the operating agent)"
+dated: "2026-11-22"
+question: >
+  Does the Lean package in tristanbuckmaster/navier-stokes at the pinned commit build on a machine the claimants have
+  never touched, do the theorems its comparator files name use only Lean's three standard axioms once proved by
+  Solution.lean, and do the statement files and the solution state those theorems with the same types?
+
+conflict: >
+  The operating agent is an Anthropic model. One claimant works at Anthropic, the repository's commits carry a Claude
+  co-author line, and the package's README says the formalization came first. Heidi Bennett is independent of the
+  claimants; the agent is not. Consequence below.
+
+environment:
+  host: "Heidi's Mac (Apple silicon). Nothing from the repository runs on the host."
+  vm: "Linux VM (Lima, instance primegaps; Ubuntu, aarch64, 20 cores, 98 GB RAM, 290 GB disk, 134 GB free); the repository is cloned and built only inside it, in a new empty directory"
+  source: "https://github.com/tristanbuckmaster/navier-stokes at commit ad53419de079eb8f95f60313473374624a348546 (2026-11-20T13:33:17Z), the second and latest commit; no licence file in the repository, so nothing from it is copied into this record beyond hashes, names and logs"
+  toolchain: "leanprover/lean4:v4.33.1 as pinned by lean/lean-toolchain; Mathlib at 0df444a360eaa60ab8c11dca51a86af692955474 as pinned by lean/lakefile.toml and lean/lake-manifest.json; Mathlib oleans from the community cache (lake exe cache get)"
+  record: "exit codes, wall time, peak memory, tool versions and full logs for every check go in cycle1/"
+
+package_as_read_before_building: >
+  The folder lean/ holds twelve default targets: the library Breakdown (the proofs), ten statement files (Challenge,
+  CertificateChallenge, ExtendedCertificateChallenge, CoerciveChallenge, ExtendedCoerciveChallenge,
+  CellLayerChallenge, CellLayerTheorems, and three Fractional files not used by the paper) whose theorems are stated
+  with sorry in place of proofs, and Solution, which re-states those theorems and proves them from Breakdown. Six
+  comparator*.json files name nineteen theorems in all whose statements must agree between a statement file and
+  Solution, and permit only propext, Quot.sound and Classical.choice. The README says the package was patched on
+  20 November and not rebuilt afterwards. No theorem in the package concludes blow-up unconditionally: every route
+  to BreakdownOnSpace or BreakdownOnTorus assumes a profile, a certificate, or cell-system data, and the package
+  contains no data.
+
 checks:
-  - id: R1
-    what: "fetch github.com/tristanbuckmaster/navier-stokes at ad53419de079eb8f95f60313473374624a348546; confirm the tree matches"
-    prediction: "commit present; tree unchanged"
-  - id: R2
-    what: "lake exe cache get (if Mathlib) and lake build; record wall time and peak memory"
-    prediction: "exit 0, 0 errors; <your predicted time and memory>"
-  - id: R3
-    what: "scan every .lean file of the development (excluding .lake and vendored dependencies) for sorry, admit, native_decide, axiom declarations, implemented_by and extern; list each hit by file and line"
-    prediction: "no hit in any file of the default build target's import closure; a hit in a file outside that closure (a statement-only or test file) is listed but is not a miss"
-  - id: R4
-    what: "#print axioms on the main theorem"
-    prediction: "propext, Classical.choice, Quot.sound only"
-  - id: R5
-    what: "compare the main theorem statement with navier_stokes_existence_and_smoothness_R3 in google-deepmind/formal-conjectures FormalConjectures/Millennium/NavierStokes.lean at 2207c54d0dbe960de591d280f997b195bf3f6e28; state identical, equivalent (with proof), or different"
-    prediction: "<your prediction>"
+  R1: "git clone, checkout ad53419d; HEAD equals the pinned commit; the sha256 of `git ls-tree -r HEAD` is recorded; count of .lean files under lean/ excluding .lake is recorded (the record says about 2,270)."
+  R2: "lake exe cache get, from lean/, exits 0 and fetches the Mathlib oleans for the pinned commit."
+  R3: "lake build (all twelve default targets, default parallelism) exits 0 with 0 error lines. Record wall time and peak memory from /usr/bin/time -v, and the count of warning lines."
+  R4: "Scan every .lean file under lean/ excluding .lake for sorry, admit (as a tactic), native_decide, axiom declarations, implemented_by, extern, unsafe and opaque; list every hit by file and line, split into statement files and Breakdown/ plus Solution.lean."
+  R5: "#print axioms, in the built environment importing Solution, on each of the nineteen theorems named by the six comparator files, and on the three consequences Solution.lean adds (certificate_breakdown_on_space, extended_certificate_breakdown_on_space, fractional_certificate_breakdown)."
+  R6: "The type of each of the nineteen theorems, pretty-printed by #check in an environment importing the statement files, and again in an environment importing Solution; the two printouts are diffed. A textual comparison only; the claimants' comparator files are not run here."
+  R7: "The statements of Breakdown.breakdown_on_space and BreakdownOnSpace are printed in full, and DeepMind's navier_stokes_existence_and_smoothness_R3 at commit 2207c54d is recorded beside them, for the reading gap. No verdict."
+
+predictions:
+  R1: "pass; about 2,270 .lean files"
+  R2: "pass"
+  R3: "exit 0, 0 error lines, wall time between 1 and 12 hours, peak memory under 60 GB. A fail is a real possibility: the README says the patched package was not rebuilt, so the two statement files it patched (CellLayerChallenge, CellLayerTheorems) and the proofs that depend on them are the likeliest point of failure. If memory runs out the build is restarted with lower parallelism under an amendment, and the restart is not a miss."
+  R4: "sorry appears in the ten statement files, as the README says, and nowhere under Breakdown/ or in Solution.lean; no hit of any other kind anywhere. Hits in the statement files are not a miss. A hit under Breakdown/ or in Solution.lean is."
+  R5: "each of the nineteen uses exactly propext, Classical.choice and Quot.sound; sorryAx appears for none of them. The three consequences the same, if their names resolve; a name that does not resolve is recorded, not a miss."
+  R6: "the nineteen printed types are textually identical between the two environments"
+  R7: "the two formal statements are different formulations of the problem's alternatives (C) and (D) without force; not identical, and equivalence is a human read, not settled here"
+
+standing_consequences:
+  all_pass: >
+    A finding is recorded: the package builds from the pinned commit against the pinned Mathlib, and the theorems its
+    comparator files name are proved with Lean's three standard axioms only, from hypotheses the package does not
+    discharge. Its standing is ACCEPTED, not certified, because the operating agent is an Anthropic model. EG1 moves
+    from proposed to in_cycle with a specific ask: the same build by anyone operating without an Anthropic model.
+    EG4 (the certificate) and EG5 (the formal statements stop short of the paper's) are untouched: this cycle shows
+    that a certificate of the stated form would imply the conclusions, which is what the record already says.
+  R3_fail: "The build failure is reported as a failure, with the first error and its file. EG1 stays proposed; a new gap names the failing file. Nothing moves."
+  R4_or_R5_fail: "Reported as found. A sorry or a non-standard axiom reaching a comparator-named theorem is named, and the package's own comparator files are recorded against it. Nothing moves to accepted."
+  R6_fail: "A statement whose type differs between a statement file and Solution is recorded by name; the finding, if any, excludes it."
+
+not_settled_by_this_cycle: >
+  EG2 (whether the formal statements say what the Clay problem asks), EG3 (no independent reading, no referee
+  report), EG4 (the certificate and the interval-arithmetic check are not released; without them nothing here
+  concludes blow-up), EG5 (the formal certificate step stops at a weak profile where the paper obtains a smooth one,
+  and the formal proofs do not follow the paper's). A build settles that the stated implications follow from Lean's
+  axioms. It settles nothing about whether their hypotheses hold.
