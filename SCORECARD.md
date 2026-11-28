@@ -21,6 +21,7 @@ Record quality: full ledger. Opened at tier zero: the claim and its artifacts ar
 | 0 | 2026-09-07 to 2026-11-22 |  | replay | no | admitted |
 | pages-2026-11-22 | 2026-11-22 | None | replay | no | admitted |
 | 1 | 2026-11-22 | Nervous Machine (Heidi Bennett; Claude Fable 5.1 as the operating agent) | rerun | yes | confirmed |
+| external-2026-11-28 | 2026-11-28 | None | replay | no | admitted |
 
 ## Gaps, in the order that would settle things fastest
 
